@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'style_index.css' %}">
+    <link rel="stylesheet" href="{% static 'nav.css' %}">
+    <link rel="stylesheet" href="{% static 'categories.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    
+</head>
+<body style="background-color: #0e90ed;">
+    <!-- navbar -->
+    <nav>
+      <div class="logo">
+        <h3><a href="lotus.html" class="logo-name">Niviya Fashion Theatre</a></h3>
+      </div>
+      <ul class="nav-links">
+<!--         <li><a href="home/{{1}}">Home</a></li>
+        <li><a href="products/{{2}}">Products</a></li>
+        <li><a href="categories/{{3}}">Categories</a></li>
+        <li><a href="contact/{{4}}">ContactUs</a></li>
+        <li><a href="login/" id="login">Login</a></li> -->
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+  <!-- navbar --> 
+
+    <div class="login">
+      <img src="{% static 'login.png' %}" height="450" width="500" alt="">
+      <div class="vl"></div>
+      <img src="{% static 'looking.avif' %}" class="login-image" alt="">
+    </div>
+    
+    
+    <br><br><br>
+  
+    <div class="login-form">
+      <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+     </div>
+    <form action="createuser/" method="post">
+      {% csrf_token %}
+        <h3>Sign Up Here 🦄</h3>
+        <span>Already have an account? <a href="back/">Sign In</a></span>
+        <label for="username">Username</label>
+        <input type="email" name="username" placeholder="Email" id="username">
+        <label for="password">Password</label>
+        <input type="password" name="password1" placeholder="Password" id="password">
+        <label for="password">Comfirm Password</label>
+        <input type="password" name="password2" placeholder="Confirm Password" id="password">
+        <button>Sign Up</button>
+    </form>
+
+    <hr>
+    <br>
+
+    <h4 class="other-login-op">Or login with</h4>
+<br>
+<br>    
+<div class="social">
+      <a href="https://google.com"><img src="{% static 'google.png' %}" class="other-login-op-img" height="33" width="30"alt=""></a>&nbsp;&nbsp;
+      <a href="https://instagram.com/thamaraiselvan_prince_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+        <img src="{% static 'insta.png' %}" class="other-login-op-img" height="32" width="35"  alt=""></a>
+      <a href="https://www.facebook.com/thamaraiselvan.thamaraiselvan.3591267"><img src="{% static 'fb.png' %}" class="other-login-op-img" height="30" width="35" alt=""></a>&nbsp;&nbsp;
+      <a href="https://google.com"><img src="{% static 'favicon.jpg' %}" class="other-login-op-img" height="32" width="35"alt=""></a>
+    </div>
+
+  <script type="text/javascript" src="{% static 'nav.js' %}"></script>
+  <script src="{% static 'login.js' %}"></script>
+
+  <script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        if (username === "" || password === "" || confirmPassword === "") {
+            alert("All fields are required.");
+            return false; // Prevent form submission
+        }
+
+        if (password !== confirmPassword) {
+            alert("Passwords do not match. Please confirm your password.");
+            return false; // Prevent form submission
+        }
+
+        return true; // Allow form submission
+    }
+</script>
+</body>
+</html>

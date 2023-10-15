@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NIVIYA FASHION THEATRE</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,700|Playfair+Display:700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen|Nova+Cut&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{% static 'style_index.css' %}">
+    <link rel="stylesheet" href="{% static 'nav.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="{% static 'Niviya.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <link rel="stylesheet" href="{% static 'categories.css' %}">
+</head>
+<style>
+   .slogan{
+    font-family: 'Beth Ellen', cursive;
+    color:rgb(255, 255, 255);
+    font-size: 36px;
+  }
+   .author{
+    font-family: 'Nova Cut', cursive;
+    color:rgb(255, 255, 255);
+  } 
+  .contact-info{
+    padding-top:170px;
+  }
+</style>
+<body> 
+    <!-- navbar -->
+      <nav>
+        <div class="logo">
+          <h3><a href="Niviya.html" class="logo-name">Niviya Fashion Theatre</a></h3>
+        </div>
+        <ul class="nav-links">
+        <li><a href="home/{{1}}">Home</a></li>
+        <li><a href="products/{{2}}">Products</a></li>
+        <li><a href="categories/{{3}}">Categories</a></li>
+        <li><a href="contact/{{4}}">ContactUs</a></li>
+        <li><a href="login/" id="login">Login</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+    <!-- navbar -->
+    <center>
+      <div class="contact-info">
+        <p class="slogan">"Niviya's Fashion...."</p>
+        <p class="author">-Thamaraiselvan-</p>
+        
+        <p class="author">tamaraiselvan2003@gmail.com</p>
+          <p class="author"><a href="https://www.linkedin.com/in/thamaraiselvan-v-581874253/" class="logo-name">On LinkedIn</a></p>
+          <div class="contact1">
+          <div class="social">
+            <a href="https://google.com"><img src="{% static 'google.png' %}" class="other-login-op-img" height="33" width="30"alt=""></a>&nbsp;&nbsp;
+            <a href="https://instagram.com/thamaraiselvan_prince_?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+              <img src="{% static 'insta.png' %}" class="other-login-op-img" height="32" width="35"  alt=""></a>
+            <a href="https://www.facebook.com/thamaraiselvan.thamaraiselvan.3591267"><img src="{% static 'fb.png' %}" class="other-login-op-img" height="30" width="35" alt=""></a>&nbsp;&nbsp;
+            <a href="https://google.com"><img src="{% static 'favicon.jpg' %}" class="other-login-op-img" height="32" width="35"alt=""></a>
+          </div>
+        </div>
+      
+      </div>
+    </center>
+      
+  
+  <script type="text/javascript" src="{% static 'nav.js' %}"></script>
+  </body>
+</html>
